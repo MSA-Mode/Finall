@@ -25,7 +25,7 @@ urlcolor: blue
 fontsize: 12pt
 biblio-style: apalike
 abstract: |
- This study delves into the examination of crime differences in America, with a focus on understanding the interplay between social factors, racial disparities, and individual actions. The key objective is, does crime disparities primarily stem from societal influences or individual behavior? The analysis utilizes datasets obtained from Data.World by extracting data from the UCR program, administered by the Federal Bureau of Investigation (FBI) and the NCVS, conducted by the Bureau of Justice Statistics (BJS), it employs various statistical techniques and visualizations to investigate the relationship between crime rates and societal impacts. Firstly, four datasets are deployed, displaying the crimes by races, and analyzing the crime being carried out on properties and on persons. The summary tables are done for the two data sets which are extracted from the dataset no. 1. Also, by checking the agencies reporting the crimes and see the reasoning behind it. The research begins by conducting a comprehensive literature review, which reveals that crime rates are influenced by a multitude of factors, including socioeconomic conditions, racial demographics, and individual choices. Existing studies highlight the higher crime rates among minority populations, particularly Black and Hispanic communities, and the significance of societal factors such as poverty and education. 
+ This study delves into the examination of crime differences in America, with a focus on understanding the interplay between social factors, racial disparities, and individual actions. The analysis utilises datasets obtained from [Data.World.](https://data.world/ucr/2016-hate-crime-statistics/workspace/project-summary?agentid=ucr&datasetid=2016-hate-crime-statistics) by extracting data from the UCR program, administered by the Federal Bureau of Investigation (FBI) and the NCVS, conducted by the Bureau of Justice Statistics (BJS), it employs various statistical techniques and visualisations to investigate the relationship between crime rates and societal impacts. Firstly, four datasets are deployed, displaying the crimes by races, and analysing the crime being carried out on properties and on persons. The summary tables are done for the two data sets which are extracted from the dataset no. 1. Also, by checking the agencies reporting the crimes and viewing the reasoning behind it. The research begins by conducting a comprehensive literature review, which reveals that crime rates are influenced by a multitude of factors, including socioeconomic conditions, racial demographics, and individual choices. Existing studies highlight the higher crime rates among minority populations, particularly Black and Hispanic communities, and the significance of societal factors such as poverty and education. The due diligence has been given to undertake the proper understanding, to finally reveal a systematic impact on individuals that unsheathes criminal behaviours. 
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
@@ -39,29 +39,19 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 
 # Introduction
 
-Crime in America is a complex issue with various social and racial dimensions. The disparities in crime rates among different racial and ethnic groups have long been a subject of study and debate. Understanding the underlying causes of these disparities is crucial for developing effective strategies to reduce crime and promote social justice.
-
-Racial and ethnic minorities, particularly African Americans and Hispanics, have historically experienced higher rates of crime victimization and involvement in criminal activities compared to their white counterparts. These disparities have significant societal implications, affecting not only the individuals involved but also their communities and the overall fabric of society. As per the Michel Foucault, he explains in his work the understanding the idea of the contemporary power, the Panopticism, which can be exhibited in the behaviors of minorites. With the understanding of the double consciousness by W.E.B Du Bois, the actions being carried out, gives out signaling of pseudo success. Minorites and social injustice has always been the main concern of Political and Sociological topics, that results in economic crimes.
+Is crime in America a by-product of systematic discrimination or individual actions? Crime in America is a complex issue with various social and racial dimensions. The disparities in crime rates among different racial and ethnic groups have long been a subject of study and debate. Understanding the underlying causes of these disparities is crucial for developing effective strategies to reduce crime and promote social justice. Racial and ethnic minorities, particularly African Americans and Hispanics, have historically experienced higher rates of crime victimisation and involvement in criminal activities compared to their white counterparts in the United States. These disparities have significant societal implications, affecting not only the individuals involved but also their communities and the overall fabric of society. As per Michel Foucault, he explains in his work the understanding of the idea of the contemporary power, Panopticism, which can be exhibited in the behaviours of minorities. With the understanding of the double consciousness by W.E.B Du Bois, the criminal actions out of systematic limitations being carried out, gives out signalling of pseudo success. Minorities and social injustice have always been the main concern of Political and Sociological topics that result in economic crimes mainly. Looking closer to understand the reasoning behind it, and showing the progress America has done to fight the problem.
 
 ## Literature Review
 
-A significant body of the research is focused on understanding the relationship between crime rates and societal factors, particularly as they relate to racial and ethnic disparities. The societal segregation happening being manifested in the US, is being considered as by product of systematic racism, or ethnic bias (@lopez2022examining),  considering how the power being excersied by the theory of Panopticism (@foucault1975discipline). This has led to low level classes struggling to climb the economic ladder of capitalism to gain a self-proclaimed success, which in economic terms still classified as middle class. As (@dubois1903souls) manifested in his book, the black in America are being systematically oppressed since the age of slavery, where we can observe to the contemporary issues still being relevant. As the discourse led (@hall1992west) to other races as being treated as the othering, there has been a high crime in huge parts of big economic cities, where the in turn leads to African Americans leading in the crime. This can be protruded from the theory of double consciousness (research gate) that leads to the crime being high in African American communties. As per suggested in the article and the theory of the from (@dubois1903souls), African American are in the state of frustration from living a double life. It can also be suggested by the type of crimes being observed which are mostly economic.  
+A significant body of the research is focused on understanding the relationship between crime rates and societal factors, particularly as they relate to racial and ethnic disparities. The societal segregation happening being manifested in the US, is being considered as by product of systematic racism, or ethnic bias (@lopez2022examining),  considering how the power being excersied by the theory of Panopticism (@foucault1975discipline). This has led to low level classes struggling to climb the economic ladder of capitalism to gain a self-proclaimed success, which in economic terms still classified as middle class. As (@dubois1903souls) manifested in his book, the black in America are being systematically oppressed since the age of slavery, where we can observe to the contemporary issues still being relevant. As the discourse led (@hall1992west) to other races as being treated as the othering, there has been a high crime in huge parts of big economic cities, where the in turn leads to African Americans leading in the crime. This can be protruded from the theory of double consciousness (@Karida) that leads to the crime being high in African American communties. As per suggested in the article and the theory of the from (@dubois1903souls), African American are in the state of frustration from living a double life. It can also be suggested by the type of crimes being observed which are mostly economic.  
 
 Societal factors play a crucial role in shaping crime rates. One key aspect is the influence of socioeconomic conditions. Studies consistently demonstrate a strong correlation between poverty and crime, indicating that individuals living in economically disadvantaged communities are more likely to engage in criminal activities. This relationship holds true across racial and ethnic groups, but the impact may vary. For example, African American and Hispanic communities often face higher levels of poverty and economic inequality, which contribute to higher crime rates within these groups (@massey1993american).
 
-On a side note, the from the official census, the African American communities make up the 13% of the population, while the white communities make up 70%. (@census2023) 
+On a side note, the official census, the African American communities make up the 13% of the population, while the white communities make up 70%. (@census2023) 
 
 # Data
 
-The UCR program, administered by the Federal Bureau of Investigation (FBI), collects data on various crimes reported to law enforcement agencies across the United States. It provides information on crime rates, types of offenses, and demographic characteristics of both victims and offenders.
-
-   The NCVS, conducted by the Bureau of Justice Statistics (BJS), collects data through surveys to estimate the number and characteristics of criminal victimizations in the United States. It provides insights into the nature of crimes, the relationship between victims and offenders, and factors contributing to victimization
-
-In order to conduct our analysis on crime differences and societal impacts in America, from the data gathered, we first look at (Tablo \ref{tab:ozet}) from random cities from all major races, a max of 7,321 total offences, it is observed that that the African communities which previously stated conclude 13% of the population reach the mean of their crimes 220.72, while compared to the white communities that gather a mean of 443.67. And looking closely at (Tablo \ref{tab:oze}) the types of offences are still like previously stated, the major offences are crowned to simple offences and destruction, vandalism and damage offences. Which reflects the true societal concern, economic and domestic violence. Comparing it with the (figure \@ref(fig:asw)) it is also shown the increased and related economic and societal pressure that show the crimes of intimidation and assaults. 
-
-When looking at the crimes differences across the cities (figure \@ref(fig:anpo)), the difference between them is till not clear, as the percentages per population is not readily available, but which is surprisingly relevant looking at (figure \@ref(fig:love)), states like California which crowned the highest crimes, albeit being the highest in population, the progression in fighting racism is extremely lower when compared with a state low economic crime while high in fighting racism like Arizona. 
-
-
+The source of the used data set is from the website [data.world.](https://data.world/ucr/2016-hate-crime-statistics/workspace/project-summary?agentid=ucr&datasetid=2016-hate-crime-statistics) The type of the datasets being used are quantitative. It contains multiple variables with multiple observations to relate the results. The UCR program, administered by the Federal Bureau of Investigation (FBI), collects data on various crimes reported to law enforcement agencies across the United States. It provides information on crime rates, types of offences, and demographic characteristics of both victims and offenders. The NCVS, conducted by the Bureau of Justice Statistics (BJS), collects data through surveys to estimate the number and characteristics of criminal victimizations in the United States. It provides insights into the nature of crimes, the relationship between victims and offenders, and factors contributing to victimisation. In order to conduct our analysis on crime differences and societal impacts in America, from the data gathered, we first look at (Table \ref{tab:ozet}) from random cities from all major races, a max of 7,321 total offences, it is observed that that the African communities which previously stated conclude 13% of the population reach the mean of their crimes 220.72, while compared to the white communities that gather a mean of 443.67. 
 
 ```{r echo=FALSE}
 library(tidyverse)
@@ -69,25 +59,18 @@ library(readxl)
 library(janitor)
 library(here)
 library(readr)
-state <- read_csv("~/cloud/project/data/dat_1.xls") %>% 
-  janitor::clean_names()
 
-racist2022 <- read_csv("data/Racist2022.csv") %>% 
-  janitor::clean_names()
 
-dat_1 <- read_xls(here("data/dat_1.xls")) %>% 
-  janitor::clean_names()
-
-dat_2 <- read_xls(here("data/dat_2.xls")) %>% 
-  janitor::clean_names()
-
-dat_3 <- read_xls(here("data/dat_3.xls")) %>% 
-  janitor::clean_names()
-
-dat_4 <- read_xls(here("data/dat_4.xls")) %>% 
+state <- read_csv("/cloud/project/data/state.csv") %>% 
   janitor::clean_names()
 
 
+
+racist2022 <- read_csv("/cloud/project/data/Racist2022.csv") %>% 
+  janitor::clean_names()
+
+dat_1 <- read_excel(here("data/dat_1.xls")) %>%
+  janitor::clean_names()
 
 
 names(dat_1) <- stringr::str_replace_all(names(dat_1), "american_indian_or_alaska_native", "indian")
@@ -104,30 +87,15 @@ names(dat_1) <- stringr::str_replace_all(names(dat_1), "native_hawaiian_or_other
 
 names(dat_1) <- stringr::str_replace_all(names(dat_1), "not_hispanic_or_latino", "notlatino")
 
-
-
-
-
-
 ```
-
-
-
-```{r, echo=FALSE}
-library(xtable) 
-library(summarytools)
-st_options(lang = "en")
-
-```
-
-
 
 
 
 ```{r echo=FALSE, results='asis'}
-library(xtable)
+library(xtable) 
 library(summarytools)
-library(tidyverse)
+st_options(lang = "en")
+
 
 dat_1 %>% 
   select("indian", "asian", "african", "races",  "hispanic", "hawaiian", "white") %>%
@@ -137,13 +105,10 @@ dat_1 %>%
          align = rep("c", 6))  %>%
   print(booktabs = TRUE, comment = FALSE, caption.placement = "top")
 
-
-
 ```
-
-
-
+\clearpage
 ```{r echo=FALSE, results='asis'}
+
 library(xtable)
 library(summarytools)
 library(tidyverse)
@@ -155,18 +120,16 @@ state %>%
          label = "tab:oze",
          align = rep("c", 6))  %>%
   print(booktabs = TRUE, comment = FALSE, caption.placement = "top")
-```
 
 
-It's important to remember that a connection does not always indicate a cause. Although these two variables move in tandem, that does not necessarily imply that one is driving the other. Simply put, this finding implies that they are related.
-```{r echo=FALSE}
-cor(state$intimidation, state$simple_assault)
 ```
+
+And looking closely at (Table \ref{tab:oze}) the types of offences are still as previously stated, the major offences are crowned to simple offences and destruction, vandalism and damage offences. Which reflects the true societal concern, economic and domestic violence. Correlating with (figure \@ref(fig:asw)) it also shows the increased and related economic and societal pressure that show the crimes of intimidation and assaults. When looking at the crimes differences across the cities (figure \@ref(fig:love)), the difference between them is still not clear, as the percentages per population is not readily available, but which is surprisingly relevant looking at (figure \@ref(fig:anpo)), states like California which crowned the highest crimes, albeit being the highest in population, the progression in fighting racism is extremely lower when compared with a state low economic crime while high in fighting racism like Arizona.
+
 
 # Methods and Data Analysis
-Visualization is a powerful tool for understanding and communicating patterns and relationships in data. We will use appropriate plots and charts to visualize the data and highlight key findings. Some commonly used visualization techniques include:
 
-
+Visualization is a powerful tool for understanding and communicating patterns and relationships in data. Our findings are consistent with previous research on crime differences and societal impacts. Three graphs have been deployed to understand the datasets (figure \@ref(fig:asw)) is a line regression with gplot to observe the intimidation with the simple assault (figure \@ref(fig:love)) is a box plot to observe key states’ scores in fighting racism (figure \@ref(fig:anpo)) is a simple bar graph to observe the economic crimes across the states. We will use appropriate plots and charts to visualize the data and highlight key findings. Some commonly used visualization techniques include. 
 
 ```{r asw, echo=FALSE, fig.cap='individual pressure', fig.align='center'}
 library(ggplot2) 
@@ -176,9 +139,10 @@ state %>%
   geom_smooth() +
   labs(x = "Simple Assault", y = " Intimidation ")
 ```
-Our findings are consistent with previous research on crime differences and societal impacts. Numerous studies have highlighted the disparities in crime rates across racial groups, with higher rates among Black and Hispanic populations compared to Whites. Socioeconomic factors, such as poverty and education, have also been identified as significant contributors to crime rates. Our analysis aligns with these existing findings, providing further evidence of the relationship between race, societal factors, and crime.
 
-```{r love, echo=FALSE, fig.align='center', fig.cap='progression in racsim'}
+Numerous studies have highlighted the disparities in crime rates across racial groups, with higher rates among Black and Hispanic populations compared to Whites. Socioeconomic factors, such as poverty and education, have also been identified as significant contributors to crime rates. Our analysis aligns with these existing findings, providing further evidence of the relationship between race, societal factors, and crime.
+
+```{r love, echo=FALSE, fig.align='center', fig.cap='progression in racsim', fig.height=8, fig.width=6}
 library(ggplot2)
 library(dplyr)
 
@@ -199,7 +163,9 @@ selected_cities %>%
 ```
 
 
+The correlation between `Intimidation` and `Simple Assault` is `r round(cor(state$intimidation, state$simple_assault), 2)`. 
 
+The correlation coefficient between the variables intimidation and simple_assault is calculated to be 0.64. This statistical measure represents the degree to which these two variables vary together. A correlation coefficient of 0.64 is indicative of a moderate to strong positive linear association between intimidation and simple_assault. It suggests that as the instances of intimidation increase, there is a tendency for the occurrences of simple assault to also increase, and vice versa.
 
 ```{r anpo, echo=FALSE, fig.align='center', fig.cap='Economic Crimes', fig.height=6, fig.width=8}
 state %>% 
@@ -210,10 +176,13 @@ state %>%
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ```
-
+\clearpage
+This correlation of 0.64 may be deemed as moderately strong, but the interpretation can largely be context-dependent. Typically, in social sciences, a correlation above 0.3 could be considered a weak positive relationship, while correlations above 0.7 are often seen as strong. Therefore, a correlation of 0.64 might be interpreted as moderate to strong.
 
 # Conclusion
-All in all, the assessment of wrongdoing contrasts in America features the mind-boggling exchange of social variables, racial aberrations, and individual activities. The connection gave offers a far-reaching investigation of these components, revealing insight into the complex idea of wrongdoing in the country. The differences in economic states and vibrant mixed races, helped in easily understanding the  crime in America by looking at how socioeconomic causes, racial inequalities, and individual acts interact. This knowledge may be used to guide policies and programs that support safer neighborhoods, advance justice, and offer opportunities for everyone, regardless of background. The political sociologists referenced also gave us a clear understanding by how the systemic racism is definitely not helping the disadvantaged.  We can eventually strive towards a more equal and inclusive society by addressing these issues.
+
+All in all, the assessment of wrongdoing contrasts in America features the mind-boggling exchange of social variables, racial aberrations, and individual activities. The connection offered a far-reaching investigation of these components, revealing insight into the complex idea of wrongdoing in the country. The differences in economic states and vibrant mixed races helped in easily understanding the crime in America by looking at how socioeconomic causes, racial inequalities, and individual acts interact. As observed from the data, it is a clear indicator of the impacts across the states that has given no support but to finally pronounce that the criminal acts are indeed a by-product of systematic discrimination. 
+This knowledge may be used to guide policies and programs that support safer neighbourhoods, advance justice, and offer opportunities for everyone, regardless of background. The political sociologists referenced also gave us a clear understanding by how systemic racism is definitely not helping the disadvantaged. We can eventually strive towards a more equal and inclusive society by addressing these issues. As globalisation continues to blossom across the globe, it is the main subject that needs to be tackled first to continue for an international economic growth.
 
 \newpage
 # References {#references}

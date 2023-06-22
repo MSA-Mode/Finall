@@ -1,0 +1,52 @@
+---
+title: "Examining Crime Differences in America: Exploring the Interplay of Social Factors, Racial Disparities, and Individual Actions"
+author: 
+  - Al Hashemi, Muaadh[^1]
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{english}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+<!-- ======================================================================= -->
+<!-- ============================== FOOTNOTES ============================== -->
+<!-- ======================================================================= -->
+[^1]:  20080843, [Github Repo](https://github.com/MSA-Mode)
+
+
+# Introduction
+Is crime in America a by-product of systematic discrimination or individual actions? Crime in America is a complex issue with various social and racial dimensions. The disparities in crime rates among different racial and ethnic groups have long been a subject of study and debate. Understanding the underlying causes of these disparities is crucial for developing effective strategies to reduce crime and promote social justice. Racial and ethnic minorities, particularly African Americans and Hispanics, have historically experienced higher rates of crime victimisation and involvement in criminal activities compared to their white counterparts in the United States. These disparities have significant societal implications, affecting not only the individuals involved but also their communities and the overall fabric of society. As per Michel Foucault, he explains in his work the understanding of the idea of the contemporary power, Panopticism, which can be exhibited in the behaviours of minorities. With the understanding of the double consciousness by W.E.B Du Bois, the criminal actions out of systematic limitations being carried out, gives out signalling of pseudo success. Minorities and social injustice have always been the main concern of Political and Sociological topics that result in economic crimes mainly. Looking closer to understand the reasoning behind it, and showing the progress America has done to fight the problem.
+
+## Literature Review
+
+A significant body of the research is focused on understanding the relationship between crime rates and societal factors, particularly as they relate to racial and ethnic disparities. The societal segregation happening being manifested in the US, is being considered as by product of systematic racism, or ethnic bias (@lopez2022examining),  considering how the power being excersied by the theory of Panopticism (@foucault1975discipline). This has led to low level classes struggling to climb the economic ladder of capitalism to gain a self-proclaimed success, which in economic terms still classified as middle class. As (@dubois1903souls) manifested in his book, the black in America are being systematically oppressed since the age of slavery, where we can observe to the contemporary issues still being relevant. As the discourse led (@hall1992west) to other races as being treated as the othering, there has been a high crime in huge parts of big economic cities, where the in turn leads to African Americans leading in the crime. This can be protruded from the theory of double consciousness (@Karida) that leads to the crime being high in African American communties. As per suggested in the article and the theory of the from (@dubois1903souls), African American are in the state of frustration from living a double life. It can also be suggested by the type of crimes being observed which are mostly economic.  
+
+Societal factors play a crucial role in shaping crime rates. One key aspect is the influence of socioeconomic conditions. Studies consistently demonstrate a strong correlation between poverty and crime, indicating that individuals living in economically disadvantaged communities are more likely to engage in criminal activities. This relationship holds true across racial and ethnic groups, but the impact may vary. For example, African American and Hispanic communities often face higher levels of poverty and economic inequality, which contribute to higher crime rates within these groups (@massey1993american).
+
+On a side note, the official census, the African American communities make up the 13% of the population, while the white communities make up 70%. (@census2023) 
+
+\newpage
+# References {#references}
+<div id="refs"></div>
+
