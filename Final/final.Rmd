@@ -199,7 +199,7 @@ selected_cities %>%
 ```
 
 
-Visualizations play a crucial role in understanding patterns and relationships in the data. We  create various plots and charts to visualize crime rates across different races and societal factors. Some suitable visualizations include: Bar charts or pie charts to display the distribution of crime rates among different racial groups.
+
 
 ```{r anpo, echo=FALSE, fig.align='center', fig.cap='Economic Crimes', fig.height=6, fig.width=8}
 state %>% 
