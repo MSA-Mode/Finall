@@ -34,7 +34,7 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 <!-- ======================================================================= -->
 <!-- ============================== FOOTNOTES ============================== -->
 <!-- ======================================================================= -->
-[^1]:  20080843, [Github Repo](https://github.com/MSA-Mode)
+[^1]:  20080843, [Github Repo](https://github.com/MSA-Mode/Finall.git)
 
 
 # Introduction
